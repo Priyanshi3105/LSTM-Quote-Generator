@@ -28,7 +28,7 @@ The notebook:
 - **LSTM**
 - **Embedding Layer**
 
-  ## **Saved Files**
+## **Saved Files**
 
 - `qoute_dataset.csv` — Quote dataset
 - `lstm_model.h5` — Saved LSTM model
@@ -44,7 +44,10 @@ LSTM-Quote-Generator/
 ├── lstm_model.h5
 ├── tokenizer.pkl
 ├── max_len.pkl
+├── app.py
+├── screenshot.png
 └── README.md
+```
 
 ## **Model Architecture**
 
@@ -75,3 +78,39 @@ The model predicts **one word at a time** from a seed sentence. Each predicted w
 seed = "are you a "
 generate_text(lstm_model, tokinizer, seed, max_len, 10)
 ```
+
+## **Streamlit Web App**
+
+This project includes a **Streamlit-based web application** that provides an interactive interface for generating text using the trained LSTM model.
+
+### **How to Run the App**
+
+First, navigate to the project directory:
+
+```bash
+cd LSTM-Quote-Generator
+```
+
+Install Streamlit if required:
+
+```bash
+pip install streamlit
+```
+
+Run the application:
+
+```bash
+streamlit run app.py
+```
+
+The application will open in your browser.
+
+You can also access it at:
+
+```text
+http://localhost:8501
+```
+
+### **App Preview**
+
+![LSTM Quote Generator App](screenshot.png)

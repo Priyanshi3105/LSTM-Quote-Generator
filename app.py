@@ -9,7 +9,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 # ------------------------------
 @st.cache_resource
 def load_resources():
-    model = load_model("lstm_model (1).h5")
+
+    model = load_model("lstm_model.h5")
+    
     with open("tokenizer.pkl", "rb") as f:
         tokenizer = pickle.load(f)
     with open("max_len.pkl", "rb") as f:
@@ -54,4 +56,8 @@ if st.button("Predict Next Word"):
 # Footer
 # ------------------------------
 st.markdown("---")
+
 st.caption("LSTM-based Next Word Prediction using Streamlit")
+
+st.caption("LSTM-based Next Word Prediction using Streamlit")
+
